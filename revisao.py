@@ -52,5 +52,69 @@ Se a lista for ['a', 'b', 'c', 'd'], a saída deve ser ['d', 'c', 'b', 'a'].
 
 lista = [1,2,3]
 
+# Matizes
+
+# matriz = []
+
+# for i in range(3):
+#     outro_array = []
+#     for j in range(3):
+#        outro_array.append(j)
+
+#     matriz.append(outro_array)
+
+
+
+# print(matriz[0][1])
+
+"""
+Exercício: Soma das Diagonais de uma Matriz
+
+Crie um programa em Python que receba uma matriz quadrada 
+(ou seja, o número de linhas é igual ao número de colunas) de números inteiros. 
+O programa deve calcular e imprimir a soma dos elementos da diagonal principal e a 
+soma dos elementos da diagonal secundária.
+
+Detalhes do Exercício:
+
+    Entrada:
+
+        Sua função deve receber uma lista de listas que representa a matriz.
+
+    Saída:
+
+        O programa deve imprimir duas linhas:
+
+            "Soma da diagonal principal: [valor da soma]"
+
+            "Soma da diagonal secundária: [valor da soma]"
+
+Exemplo:
+
+Para a seguinte matriz:
+
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+A saída esperada seria:
+
+Soma da diagonal principal: 15
+Soma da diagonal secundária: 15
+"""
+
+quadrado = [
+    [1,2,3],
+    [5,6,7],
+    [9,0,1]
+]
+
+diagonal_principal = quadrado[0][0] + quadrado[1][1] + quadrado[2][2]
+diagonal_secundaria = quadrado[0][2] + quadrado[1][1] + quadrado[2][0]
+
+print(diagonal_principal)
+print(diagonal_secundaria)
 
 
