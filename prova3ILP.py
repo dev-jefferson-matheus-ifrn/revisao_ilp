@@ -128,297 +128,321 @@ quais esteja matriculado.
 e) Encerrar o programa (no caso específico dessa avaliação, isso deverá encerrar a questão) e exibir
 uma mensagem de encerramento.
 """
-disciplinas = []
-alunos = []
-matriculas = {}
+# disciplinas = []
+# alunos = []
+# matriculas = {}
 
-print('\t\t\tCADASTRO DE ALUNOS\n')
+# print('\t\t\tCADASTRO DE ALUNOS\n')
 
-print('\t\t\t1-Cadastrar uma disciplina')
-print('\t\t\t2-Cadastrar um aluno')
-print('\t\t\t3-Remover um aluno')
-print('\t\t\t4-Remover uma disciplina')
-print('\t\t\t5-Atualizar um aluno')
-print('\t\t\t6-Atualizar uma disciplina')
-print('\t\t\t7-Matricular um aluno')
-print('\t\t\t8-Alunos matriculados')
-print('\t\t\t9-Sair\n')
-print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-escolha = int(input('\t\t\tInforme a escolha: '))
-
-
+# print('\t\t\t1-Cadastrar uma disciplina')
+# print('\t\t\t2-Cadastrar um aluno')
+# print('\t\t\t3-Remover um aluno')
+# print('\t\t\t4-Remover uma disciplina')
+# print('\t\t\t5-Atualizar um aluno')
+# print('\t\t\t6-Atualizar uma disciplina')
+# print('\t\t\t7-Matricular um aluno')
+# print('\t\t\t8-Alunos matriculados')
+# print('\t\t\t9-Sair\n')
+# print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+# escolha = int(input('\t\t\tInforme a escolha: '))
 
 
 
-while(escolha != 9):
-    match escolha:
-        case 1:
-            disciplina = input('\t\t\tInforme a disciplina a ser cadastrada: ')
-            print('\t\t\t_________________________________________________________')
-            if(disciplina not in disciplinas):
-                disciplinas += [disciplina]
-            print('\t\t\tCADASTRO DE ALUNOS\n')
 
-            print('\t\t\t1-Cadastrar uma disciplina')
-            print('\t\t\t2-Cadastrar um aluno')
-            print('\t\t\t3-Remover um aluno')
-            print('\t\t\t4-Remover uma disciplina')
-            print('\t\t\t5-Atualizar um aluno')
-            print('\t\t\t6-Atualizar uma disciplina')
-            print('\t\t\t7-Matricular um aluno')
-            print('\t\t\t8-Alunos matriculados')
-            print('\t\t\t9-Sair\n')
-            print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-            escolha = int(input('\t\t\tInforme a escolha: '))
-            while(not((escolha <= 9) and (escolha >= 1))):
-                escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
-        case 2:
-            aluno = input('\t\t\tInforme O Aluno a ser cadastrado(a): ')
-            print('\t\t\t_________________________________________________________')
-            if(aluno not in alunos):
-                alunos += [aluno]
-            print('\t\t\tCADASTRO DE ALUNOS\n')
+# while(escolha != 9):
+#     match escolha:
+#         case 1:
+#             disciplina = input('\t\t\tInforme a disciplina a ser cadastrada: ')
+#             print('\t\t\t_________________________________________________________')
+#             if(disciplina not in disciplinas):
+#                 disciplinas += [disciplina]
+#             print('\t\t\tCADASTRO DE ALUNOS\n')
 
-            print('\t\t\t1-Cadastrar uma disciplina')
-            print('\t\t\t2-Cadastrar um aluno')
-            print('\t\t\t3-Remover um aluno')
-            print('\t\t\t4-Remover uma disciplina')
-            print('\t\t\t5-Atualizar um aluno')
-            print('\t\t\t6-Atualizar uma disciplina')
-            print('\t\t\t7-Matricular um aluno')
-            print('\t\t\t8-Alunos matriculados')
-            print('\t\t\t9-Sair\n')
-            print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-            escolha = int(input('\t\t\tInforme a escolha: '))
-            while(not((escolha <= 9) and (escolha >= 1))):
-                escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#             print('\t\t\t1-Cadastrar uma disciplina')
+#             print('\t\t\t2-Cadastrar um aluno')
+#             print('\t\t\t3-Remover um aluno')
+#             print('\t\t\t4-Remover uma disciplina')
+#             print('\t\t\t5-Atualizar um aluno')
+#             print('\t\t\t6-Atualizar uma disciplina')
+#             print('\t\t\t7-Matricular um aluno')
+#             print('\t\t\t8-Alunos matriculados')
+#             print('\t\t\t9-Sair\n')
+#             print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#             escolha = int(input('\t\t\tInforme a escolha: '))
+#             while(not((escolha <= 9) and (escolha >= 1))):
+#                 escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
-        case 3:
-            aluno = input('\t\t\tInforme O Aluno a ser removido(a): ')
-            print('\t\t\t_________________________________________________________')
-            if(aluno in alunos):
-                alunos.remove(aluno)
-            else:
-                print('\t\t\tAluno não encontrado')
+#         case 2:
+#             aluno = input('\t\t\tInforme O Aluno a ser cadastrado(a): ')
+#             print('\t\t\t_________________________________________________________')
+#             if(aluno not in alunos):
+#                 alunos += [aluno]
+#             print('\t\t\tCADASTRO DE ALUNOS\n')
 
-            print('\t\t\tCADASTRO DE ALUNOS\n')
+#             print('\t\t\t1-Cadastrar uma disciplina')
+#             print('\t\t\t2-Cadastrar um aluno')
+#             print('\t\t\t3-Remover um aluno')
+#             print('\t\t\t4-Remover uma disciplina')
+#             print('\t\t\t5-Atualizar um aluno')
+#             print('\t\t\t6-Atualizar uma disciplina')
+#             print('\t\t\t7-Matricular um aluno')
+#             print('\t\t\t8-Alunos matriculados')
+#             print('\t\t\t9-Sair\n')
+#             print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#             escolha = int(input('\t\t\tInforme a escolha: '))
+#             while(not((escolha <= 9) and (escolha >= 1))):
+#                 escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
-            print('\t\t\t1-Cadastrar uma disciplina')
-            print('\t\t\t2-Cadastrar um aluno')
-            print('\t\t\t3-Remover um aluno')
-            print('\t\t\t4-Remover uma disciplina')
-            print('\t\t\t5-Atualizar um aluno')
-            print('\t\t\t6-Atualizar uma disciplina')
-            print('\t\t\t7-Matricular um aluno')
-            print('\t\t\t8-Alunos matriculados')
-            print('\t\t\t9-Sair\n')
-            print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-            escolha = int(input('\t\t\tInforme a escolha: '))
-            while(not((escolha <= 9) and (escolha >= 1))):
-                escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#         case 3:
+#             aluno = input('\t\t\tInforme O Aluno a ser removido(a): ')
+#             print('\t\t\t_________________________________________________________')
+#             if(aluno in alunos):
+#                 alunos.remove(aluno)
+#             else:
+#                 print('\t\t\tAluno não encontrado')
+
+#             print('\t\t\tCADASTRO DE ALUNOS\n')
+
+#             print('\t\t\t1-Cadastrar uma disciplina')
+#             print('\t\t\t2-Cadastrar um aluno')
+#             print('\t\t\t3-Remover um aluno')
+#             print('\t\t\t4-Remover uma disciplina')
+#             print('\t\t\t5-Atualizar um aluno')
+#             print('\t\t\t6-Atualizar uma disciplina')
+#             print('\t\t\t7-Matricular um aluno')
+#             print('\t\t\t8-Alunos matriculados')
+#             print('\t\t\t9-Sair\n')
+#             print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#             escolha = int(input('\t\t\tInforme a escolha: '))
+#             while(not((escolha <= 9) and (escolha >= 1))):
+#                 escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
          
-        case 4:
-            disciplina = input('\t\t\tInforme disciplina a ser removido(a): ')
-            print('\t\t\t_________________________________________________________')
-            if(disciplina in disciplinas):
-                disciplinas.remove(disciplina)
-            else:
-                print('\t\t\tDisciplina não encontrada')
+#         case 4:
+#             disciplina = input('\t\t\tInforme disciplina a ser removido(a): ')
+#             print('\t\t\t_________________________________________________________')
+#             if(disciplina in disciplinas):
+#                 disciplinas.remove(disciplina)
+#             else:
+#                 print('\t\t\tDisciplina não encontrada')
 
-            print('\t\t\tCADASTRO DE ALUNOS\n')
+#             print('\t\t\tCADASTRO DE ALUNOS\n')
 
-            print('\t\t\t1-Cadastrar uma disciplina')
-            print('\t\t\t2-Cadastrar um aluno')
-            print('\t\t\t3-Remover um aluno')
-            print('\t\t\t4-Remover uma disciplina')
-            print('\t\t\t5-Atualizar um aluno')
-            print('\t\t\t6-Atualizar uma disciplina')
-            print('\t\t\t7-Matricular um aluno')
-            print('\t\t\t8-Alunos matriculados')
-            print('\t\t\t9-Sair\n')
-            print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-            escolha = int(input('\t\t\tInforme a escolha: '))
-            while(not((escolha <= 9) and (escolha >= 1))):
-                escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#             print('\t\t\t1-Cadastrar uma disciplina')
+#             print('\t\t\t2-Cadastrar um aluno')
+#             print('\t\t\t3-Remover um aluno')
+#             print('\t\t\t4-Remover uma disciplina')
+#             print('\t\t\t5-Atualizar um aluno')
+#             print('\t\t\t6-Atualizar uma disciplina')
+#             print('\t\t\t7-Matricular um aluno')
+#             print('\t\t\t8-Alunos matriculados')
+#             print('\t\t\t9-Sair\n')
+#             print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#             escolha = int(input('\t\t\tInforme a escolha: '))
+#             while(not((escolha <= 9) and (escolha >= 1))):
+#                 escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
-        case 5:
-            aluno = input('\t\t\tInforme o aluno(a) a ser atualizado(a): ')
-            if aluno in alunos:
-                atualização = input('\t\t\tInforma o aluno(a) atualizado(a): ')
-                index = alunos.index(aluno)
-                alunos[index] = [atualização]
-                if aluno in matriculas:
-                    disciplinas_cursando = matriculas[aluno]
+#         case 5:
+#             aluno = input('\t\t\tInforme o aluno(a) a ser atualizado(a): ')
+#             if aluno in alunos:
+#                 atualização = input('\t\t\tInforma o aluno(a) atualizado(a): ')
+#                 index = alunos.index(aluno)
+#                 alunos[index] = [atualização]
+#                 if aluno in matriculas:
+#                     disciplinas_cursando = matriculas[aluno]
 
-                    matriculas[atualização] = disciplinas_cursando
+#                     matriculas[atualização] = disciplinas_cursando
 
-                    del matriculas[aluno]
-            else:
-                print('\t\t\tAluno não encontrado')
-                print('\t\t\t___________________________________________________')
-                print('\t\t\tCADASTRO DE ALUNOS\n')
+#                     del matriculas[aluno]
+#             else:
+#                 print('\t\t\tAluno não encontrado')
+#                 print('\t\t\t___________________________________________________')
+#                 print('\t\t\tCADASTRO DE ALUNOS\n')
 
-                print('\t\t\t1-Cadastrar uma disciplina')
-                print('\t\t\t2-Cadastrar um aluno')
-                print('\t\t\t3-Remover um aluno')
-                print('\t\t\t4-Remover uma disciplina')
-                print('\t\t\t5-Atualizar um aluno')
-                print('\t\t\t6-Atualizar uma disciplina')
-                print('\t\t\t7-Matricular um aluno')
-                print('\t\t\t8-Alunos matriculados')
-                print('\t\t\t9-Sair\n')
-                print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-                escolha = int(input('\t\t\tInforme a escolha: '))
-                while(not((escolha <= 9) and (escolha >= 1))):
-                    escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#                 print('\t\t\t1-Cadastrar uma disciplina')
+#                 print('\t\t\t2-Cadastrar um aluno')
+#                 print('\t\t\t3-Remover um aluno')
+#                 print('\t\t\t4-Remover uma disciplina')
+#                 print('\t\t\t5-Atualizar um aluno')
+#                 print('\t\t\t6-Atualizar uma disciplina')
+#                 print('\t\t\t7-Matricular um aluno')
+#                 print('\t\t\t8-Alunos matriculados')
+#                 print('\t\t\t9-Sair\n')
+#                 print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#                 escolha = int(input('\t\t\tInforme a escolha: '))
+#                 while(not((escolha <= 9) and (escolha >= 1))):
+#                     escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
-            print('\t\t\tCADASTRO DE ALUNOS\n')
+#             print('\t\t\tCADASTRO DE ALUNOS\n')
 
-            print('\t\t\t2-Cadastrar um aluno')
-            print('\t\t\t3-Remover um aluno')
-            print('\t\t\t4-Remover uma disciplina')
-            print('\t\t\t5-Atualizar um aluno')
-            print('\t\t\t6-Atualizar uma disciplina')
-            print('\t\t\t7-Matricular um aluno')
-            print('\t\t\t8-Alunos matriculados')
-            print('\t\t\t9-Sair\n')
-            print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-            escolha = int(input('\t\t\tInforme a escolha: '))
-            while(not((escolha <= 9) and (escolha >= 1))):
-                escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#             print('\t\t\t2-Cadastrar um aluno')
+#             print('\t\t\t3-Remover um aluno')
+#             print('\t\t\t4-Remover uma disciplina')
+#             print('\t\t\t5-Atualizar um aluno')
+#             print('\t\t\t6-Atualizar uma disciplina')
+#             print('\t\t\t7-Matricular um aluno')
+#             print('\t\t\t8-Alunos matriculados')
+#             print('\t\t\t9-Sair\n')
+#             print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#             escolha = int(input('\t\t\tInforme a escolha: '))
+#             while(not((escolha <= 9) and (escolha >= 1))):
+#                 escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
-        case 6:
-            disciplina = input('\t\t\tInforme o disciplina a ser atualizado: ')
-            if disciplina in disciplinas:
-                atualização = input('\t\t\tInforma a disciplina atualizada: ')
-                index = disciplinas.index(disciplina)
-                disciplinas[index] = atualização
-                for chave, valor in matriculas.items():
-                    disciplinas_a_serem_alteradas = list(matriculas[chave])
-                    if disciplina in disciplinas_a_serem_alteradas:
-                        index = disciplinas_a_serem_alteradas.index(disciplina)
-                        disciplinas_a_serem_alteradas[index] = atualização
-                        matriculas[chave] = disciplinas_a_serem_alteradas
+#         case 6:
+#             disciplina = input('\t\t\tInforme o disciplina a ser atualizado: ')
+#             if disciplina in disciplinas:
+#                 atualização = input('\t\t\tInforma a disciplina atualizada: ')
+#                 index = disciplinas.index(disciplina)
+#                 disciplinas[index] = atualização
+#                 for chave, valor in matriculas.items():
+#                     disciplinas_a_serem_alteradas = list(matriculas[chave])
+#                     if disciplina in disciplinas_a_serem_alteradas:
+#                         index = disciplinas_a_serem_alteradas.index(disciplina)
+#                         disciplinas_a_serem_alteradas[index] = atualização
+#                         matriculas[chave] = disciplinas_a_serem_alteradas
                         
 
-            else:
-                print('\t\t\tDisciplina não encontrada')
-                print('\t\t\t___________________________________________________')
-                print('\t\t\tCADASTRO DE ALUNOS\n')
+#             else:
+#                 print('\t\t\tDisciplina não encontrada')
+#                 print('\t\t\t___________________________________________________')
+#                 print('\t\t\tCADASTRO DE ALUNOS\n')
 
-                print('\t\t\t1-Cadastrar uma disciplina')
-                print('\t\t\t2-Cadastrar um aluno')
-                print('\t\t\t3-Remover um aluno')
-                print('\t\t\t4-Remover uma disciplina')
-                print('\t\t\t5-Atualizar um aluno')
-                print('\t\t\t6-Atualizar uma disciplina')
-                print('\t\t\t7-Matricular um aluno')
-                print('\t\t\t8-Alunos matriculados')
-                print('\t\t\t9-Sair\n')
-                print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-                escolha = int(input('\t\t\tInforme a escolha: '))
-                while(not((escolha <= 9) and (escolha >= 1))):
-                    escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#                 print('\t\t\t1-Cadastrar uma disciplina')
+#                 print('\t\t\t2-Cadastrar um aluno')
+#                 print('\t\t\t3-Remover um aluno')
+#                 print('\t\t\t4-Remover uma disciplina')
+#                 print('\t\t\t5-Atualizar um aluno')
+#                 print('\t\t\t6-Atualizar uma disciplina')
+#                 print('\t\t\t7-Matricular um aluno')
+#                 print('\t\t\t8-Alunos matriculados')
+#                 print('\t\t\t9-Sair\n')
+#                 print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#                 escolha = int(input('\t\t\tInforme a escolha: '))
+#                 while(not((escolha <= 9) and (escolha >= 1))):
+#                     escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
-            print('\t\t\tCADASTRO DE ALUNOS\n')
+#             print('\t\t\tCADASTRO DE ALUNOS\n')
 
-            print('\t\t\t2-Cadastrar um aluno')
-            print('\t\t\t3-Remover um aluno')
-            print('\t\t\t4-Remover uma disciplina')
-            print('\t\t\t5-Atualizar um aluno')
-            print('\t\t\t6-Atualizar uma disciplina')
-            print('\t\t\t7-Matricular um aluno')
-            print('\t\t\t8-Alunos matriculados')
-            print('\t\t\t9-Sair\n')
-            print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-            escolha = int(input('\t\t\tInforme a escolha: '))
-            while(not((escolha <= 9) and (escolha >= 1))):
-                escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#             print('\t\t\t2-Cadastrar um aluno')
+#             print('\t\t\t3-Remover um aluno')
+#             print('\t\t\t4-Remover uma disciplina')
+#             print('\t\t\t5-Atualizar um aluno')
+#             print('\t\t\t6-Atualizar uma disciplina')
+#             print('\t\t\t7-Matricular um aluno')
+#             print('\t\t\t8-Alunos matriculados')
+#             print('\t\t\t9-Sair\n')
+#             print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#             escolha = int(input('\t\t\tInforme a escolha: '))
+#             while(not((escolha <= 9) and (escolha >= 1))):
+#                 escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
             
                  
         
-        case 7:
-            aluno = input('\t\t\tInforme aluno a ser matriculado(a): ')
-            disciplina = input('\t\t\tInforme a disciplina para o aluno ser matriculado(a): ')
-            if((aluno not in alunos) or (disciplina not in disciplinas)):
-                print('\t\t\tDisciplina ou aluno não encontrado\n')
-                print('\t\t\t___________________________________________________')
-                print('\t\t\tCADASTRO DE ALUNOS\n')
+#         case 7:
+#             aluno = input('\t\t\tInforme aluno a ser matriculado(a): ')
+#             disciplina = input('\t\t\tInforme a disciplina para o aluno ser matriculado(a): ')
+#             if((aluno not in alunos) or (disciplina not in disciplinas)):
+#                 print('\t\t\tDisciplina ou aluno não encontrado\n')
+#                 print('\t\t\t___________________________________________________')
+#                 print('\t\t\tCADASTRO DE ALUNOS\n')
 
-                print('\t\t\t1-Cadastrar uma disciplina')
-                print('\t\t\t2-Cadastrar um aluno')
-                print('\t\t\t3-Remover um aluno')
-                print('\t\t\t4-Remover uma disciplina')
-                print('\t\t\t5-Atualizar um aluno')
-                print('\t\t\t6-Atualizar uma disciplina')
-                print('\t\t\t7-Matricular um aluno')
-                print('\t\t\t8-Alunos matriculados')
-                print('\t\t\t9-Sair\n')
-                print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-                escolha = int(input('\t\t\tInforme a escolha: '))
-                while(not((escolha <= 9) and (escolha >= 1))):
-                    escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
-            else:
-                if aluno not in matriculas:
-                    matriculas[aluno] = [disciplina]
-                    print('\t\t\tCADASTRO DE ALUNOS\n')
+#                 print('\t\t\t1-Cadastrar uma disciplina')
+#                 print('\t\t\t2-Cadastrar um aluno')
+#                 print('\t\t\t3-Remover um aluno')
+#                 print('\t\t\t4-Remover uma disciplina')
+#                 print('\t\t\t5-Atualizar um aluno')
+#                 print('\t\t\t6-Atualizar uma disciplina')
+#                 print('\t\t\t7-Matricular um aluno')
+#                 print('\t\t\t8-Alunos matriculados')
+#                 print('\t\t\t9-Sair\n')
+#                 print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#                 escolha = int(input('\t\t\tInforme a escolha: '))
+#                 while(not((escolha <= 9) and (escolha >= 1))):
+#                     escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#             else:
+#                 if aluno not in matriculas:
+#                     matriculas[aluno] = [disciplina]
+#                     print('\t\t\tCADASTRO DE ALUNOS\n')
 
-                    print('\t\t\t1-Cadastrar uma disciplina')
-                    print('\t\t\t2-Cadastrar um aluno')
-                    print('\t\t\t3-Remover um aluno')
-                    print('\t\t\t4-Remover uma disciplina')
-                    print('\t\t\t5-Atualizar um aluno')
-                    print('\t\t\t6-Atualizar uma disciplina')
-                    print('\t\t\t7-Matricular um aluno')
-                    print('\t\t\t8-Alunos matriculados')
-                    print('\t\t\t9-Sair\n')
-                    print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-                    escolha = int(input('\t\t\tInforme a escolha: '))
-                    while(not((escolha <= 9) and (escolha >= 1))):
-                        escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
-                else:
-                    matriculas[aluno] += [disciplina]
-                    print('\t\t\tCADASTRO DE ALUNOS\n')
+#                     print('\t\t\t1-Cadastrar uma disciplina')
+#                     print('\t\t\t2-Cadastrar um aluno')
+#                     print('\t\t\t3-Remover um aluno')
+#                     print('\t\t\t4-Remover uma disciplina')
+#                     print('\t\t\t5-Atualizar um aluno')
+#                     print('\t\t\t6-Atualizar uma disciplina')
+#                     print('\t\t\t7-Matricular um aluno')
+#                     print('\t\t\t8-Alunos matriculados')
+#                     print('\t\t\t9-Sair\n')
+#                     print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#                     escolha = int(input('\t\t\tInforme a escolha: '))
+#                     while(not((escolha <= 9) and (escolha >= 1))):
+#                         escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#                 else:
+#                     matriculas[aluno] += [disciplina]
+#                     print('\t\t\tCADASTRO DE ALUNOS\n')
 
-                    print('\t\t\t1-Cadastrar uma disciplina')
-                    print('\t\t\t2-Cadastrar um aluno')
-                    print('\t\t\t3-Remover um aluno')
-                    print('\t\t\t4-Remover uma disciplina')
-                    print('\t\t\t5-Atualizar um aluno')
-                    print('\t\t\t6-Atualizar uma disciplina')
-                    print('\t\t\t7-Matricular um aluno')
-                    print('\t\t\t8-Alunos matriculados')
-                    print('\t\t\t9-Sair\n')
-                    print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-                    escolha = int(input('\t\t\tInforme a escolha: '))
-                    while(not((escolha <= 9) and (escolha >= 1))):
-                        escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#                     print('\t\t\t1-Cadastrar uma disciplina')
+#                     print('\t\t\t2-Cadastrar um aluno')
+#                     print('\t\t\t3-Remover um aluno')
+#                     print('\t\t\t4-Remover uma disciplina')
+#                     print('\t\t\t5-Atualizar um aluno')
+#                     print('\t\t\t6-Atualizar uma disciplina')
+#                     print('\t\t\t7-Matricular um aluno')
+#                     print('\t\t\t8-Alunos matriculados')
+#                     print('\t\t\t9-Sair\n')
+#                     print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#                     escolha = int(input('\t\t\tInforme a escolha: '))
+#                     while(not((escolha <= 9) and (escolha >= 1))):
+#                         escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
 
 
 
-        case 8:
-            print(f'\t\t\t{matriculas}\n')
-            print('\t\t\t_____________________________________________')
-            print('\t\t\tCADASTRO DE ALUNOS\n')
+#         case 8:
+#             print(f'\t\t\t{matriculas}\n')
+#             print('\t\t\t_____________________________________________')
+#             print('\t\t\tCADASTRO DE ALUNOS\n')
 
-            print('\t\t\t1-Cadastrar uma disciplina')
-            print('\t\t\t2-Cadastrar um aluno')
-            print('\t\t\t3-Remover um aluno')
-            print('\t\t\t4-Remover uma disciplina')
-            print('\t\t\t5-Atualizar um aluno')
-            print('\t\t\t6-Atualizar uma disciplina')
-            print('\t\t\t7-Matricular um aluno')
-            print('\t\t\t8-Alunos matriculados')
-            print('\t\t\t9-Sair\n')
-            print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
-            escolha = int(input('\t\t\tInforme a escolha: '))
-            while(not((escolha <= 9) and (escolha >= 1))):
-                escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
+#             print('\t\t\t1-Cadastrar uma disciplina')
+#             print('\t\t\t2-Cadastrar um aluno')
+#             print('\t\t\t3-Remover um aluno')
+#             print('\t\t\t4-Remover uma disciplina')
+#             print('\t\t\t5-Atualizar um aluno')
+#             print('\t\t\t6-Atualizar uma disciplina')
+#             print('\t\t\t7-Matricular um aluno')
+#             print('\t\t\t8-Alunos matriculados')
+#             print('\t\t\t9-Sair\n')
+#             print('\t\t\tEscolha de 1 a 9 para utilizar as opções')
+#             escolha = int(input('\t\t\tInforme a escolha: '))
+#             while(not((escolha <= 9) and (escolha >= 1))):
+#                 escolha = int(input('\t\t\tEscolha errada Informe a escolha correta: '))
                 
 
+# ---------------------------------------------------------------------
 
+"""
+3 – (10 pts) Campeonato de natação. Crie um programa que simula um campeonato de natação nado
+livre em piscina de 50m. O programa deverá receber como entrada o nome de 32 nadadores e dividí-los
+em 4 grupos (4x8). O programa deverá exibir o resultado das disputas de cada grupo escolhendo de forma
+aleatória os resultados de tempos em segundos que cada nadador obterá na disputa, os quais devem
+variar entre 20.00 e 22.99, ao longo de cada uma das fases de disputa até a etapa final do campeonato, e
+exibindo o nome e o resultado. A fase seguinte da competição consiste em formar mais dois grupos com
+8 nadadores, cada qual formado pelos 16 melhores tempos da primeira fase, independente do grupo emque o nadador esteja. Se houver um empate no tempo entre os nadadores em qualquer uma das fases
+para determinar quem avança (como as semifinais), pode haver uma prova de desempate (swim-off) para
+decidir. Caso isso aconteça, o programa deverá exibir especificamente a disputa com os mesmos detalhes
+das fases anteriores, mas informando que se trata de um desempate. Para a fase final, seguem os 8
+melhores tempos dos nadadores entre os 16 competidores da fase anterior. Ao término da disputa da
+fase final, o programa deverá exibir o pódio informando quem foi o medalhista de ouro, o medalhista de
+prata e o medalhista de bronze. Caso haja empate na fase final, os nadadores que empatarem dividirão
+as medalhas entre si e isso deverá ser informado. Exemplo de uso da função uniform():
+"""
+
+nadadores = [nadador for nadador in range(1,33,1)]
+
+grupos = [nadadores[i:i+8] for i in range(0,32,8)]
+
+print(nadadores)
+print(grupos)
 
 
 

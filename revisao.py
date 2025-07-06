@@ -118,6 +118,72 @@ Soma da diagonal secundária: 15
 # print(diagonal_secundaria)
 
 
+"""
+10. Escreva um programa que leia 9 valores inteiros e armazene em uma matriz 3x3. O
+
+programa deve informar quantos valores ímpares foram digitados pelo usuário e impri-
+mir a matriz no formato 3x3. Dica: use o operador “%” para verificar se o número é
+
+ímpar. “,”. Exemplo:
+"""
+
+# contador = 0
+# inteiros = []
+
+# for i in range(1,10,1):
+#     novo_numero = int(input('Informe um novo número: '))
+#     inteiros += [novo_numero]
+#     if novo_numero % 2 == 1:
+#         contador+= 1
+
+
+# matriz = [inteiros[i:i+3] for i in range(0,9,3)]
+
+
+# print(matriz)
+# print(f'A quantidade de impares é: {contador}')
+
+
+"""
+11. Escreva um programa que solicite ao usuário o valor das duas dimensões de uma
+matriz. Em seguida, solicite ao usuário e armazene nessa matriz uma quantidade de
+
+valores inteiros correspondente ao tamanho necessário para preencher todas as posi-
+ções da matriz. O programa deverá exibir a matriz de dimensões “m por n” informar o
+
+resultado da soma de cada LINHA da matriz. Exemplos:
+
+"""
+
+numero_linhas = int(input('Informe a quantidade de linhas: '))
+numero_colunas = int(input('Informe a quantidade de colunas: '))
+
+print('_____________________________________________________')
+
+matriz = []
+
+for i in range(numero_linhas):
+    linha = []
+    for j in range(numero_colunas):
+        inteiro = int(input('Informe um valor: '))
+        linha.append(inteiro)
+
+    matriz.append(linha)
+
+print('_____________________________________________________')
+
+print(matriz)
+
+for i in range(len(matriz)):
+    soma = 0
+    for j in range(len(matriz[i])):
+        soma += matriz[i][j]
+    
+    print(f'A soma dos elementos da linha {i} é igual a: {soma}')
+
+    
+
+
 # ------------------------
 
 # Revisão Dicionarios
@@ -163,39 +229,43 @@ palavras:
 ‘dolor’:2, ‘comem’:1}
 """
 
-texto = input('Informe um texto ou um conjunto de palavras separados por um espaço: ')
+# texto = input('Informe um texto ou um conjunto de palavras separados por um espaço: ')
 
-while(not(len(texto) > 0)):
-    texto = input('Informe um texto ou um conjunto de palavras separados por um espaço: ')
+# while(not(len(texto) > 0)):
+#     texto = input('Informe um texto ou um conjunto de palavras separados por um espaço: ')
 
 
-palavras = []
+# palavras = []
 
-palavra_completa = ''
+# palavra_completa = ''
 
-final = 1
+# final = 1
 
-final_texto = len(texto)
+# final_texto = len(texto)
 
-aparicoes_palavras = {}
+# aparicoes_palavras = {}
 
-for caractere in texto:
-    if(not(caractere == ',' or caractere == '.' or caractere == ' ')):
-        palavra_completa += caractere
+# for caractere in texto:
+#     if(not(caractere == ',' or caractere == '.' or caractere == ' ')):
+#         palavra_completa += caractere
     
-    if(caractere == ' ' or final == final_texto):
-        palavras += [palavra_completa]
-        palavra_completa = ''
+#     if(caractere == ' ' or final == final_texto):
+#         palavras += [palavra_completa]
+#         palavra_completa = ''
 
-    final += 1
+#     final += 1
 
 
-for palavra in palavras:
-    counter = 0
-    for i in range(len(palavras)):
-        if(palavra.lower() == palavras[i].lower()):
-            counter += 1
+# for palavra in palavras:
+#     counter = 0
+#     for i in range(len(palavras)):
+#         if(palavra.lower() == palavras[i].lower()):
+#             counter += 1
 
-    aparicoes_palavras[palavra.lower()] = counter
+#     aparicoes_palavras[palavra.lower()] = counter
 
-print(aparicoes_palavras)
+# print(aparicoes_palavras)
+
+
+
+
