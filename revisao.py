@@ -105,16 +105,97 @@ Soma da diagonal principal: 15
 Soma da diagonal secundária: 15
 """
 
-quadrado = [
-    [1,2,3],
-    [5,6,7],
-    [9,0,1]
-]
+# quadrado = [
+#     [1,2,3],
+#     [5,6,7],
+#     [9,0,1]
+# ]
 
-diagonal_principal = quadrado[0][0] + quadrado[1][1] + quadrado[2][2]
-diagonal_secundaria = quadrado[0][2] + quadrado[1][1] + quadrado[2][0]
+# diagonal_principal = quadrado[0][0] + quadrado[1][1] + quadrado[2][2]
+# diagonal_secundaria = quadrado[0][2] + quadrado[1][1] + quadrado[2][0]
 
-print(diagonal_principal)
-print(diagonal_secundaria)
+# print(diagonal_principal)
+# print(diagonal_secundaria)
 
 
+# ------------------------
+
+# Revisão Dicionarios
+
+"""
+11. Escreva um programa que receba como entrada uma string várias palavras separadas
+por espaço. O programa deverá verificar e apresentar a quantidade de ocorrência de
+cada palavra no texto repassado como entrada para o programa, sem fazer distinção
+entre letras maiúsculas ou minúsculas. Os sinais de pontuação não devem ser
+contabilizados, como por exemplo “.” Ou “,”. Crie um dicionário que armazene a
+contagem de cada palavra no texto. A chave do dicionário deve ser a palavra e o valor
+deve ser o número de vezes que a palavra aparece no texto. Imprima o dicionário
+resultante. Exemplos:
+Entrada 1:
+Lorem ipsum
+dolor sit amet.
+Lorem opsum
+dolor amet, dolor
+comem.
+
+Saída 1:
+Contagem de
+palavras:
+{‘Lorem’:2, ‘ipsum’:1,
+‘dolor’:3, ‘sit’:1,
+‘amet’:2, ‘opsum’:1,
+‘comem’:1}
+
+Entrada 2:
+Lorem ipsum
+ipsum lorem sit
+amet. Lorem
+corpus dolor
+amet, dolor
+comem CorpuS.
+
+Saída 2:
+Contagem de
+palavras:
+{‘lorem’:3, ‘ipsum’:2,
+‘dolor’:2, ‘sit’:1,
+‘amet’:1, ‘corpus’:2,
+‘dolor’:2, ‘comem’:1}
+"""
+
+texto = input('Informe um texto ou um conjunto de palavras separados por um espaço: ')
+
+while(not(len(texto) > 0)):
+    texto = input('Informe um texto ou um conjunto de palavras separados por um espaço: ')
+
+
+palavras = []
+
+palavra_completa = ''
+
+final = 1
+
+final_texto = len(texto)
+
+aparicoes_palavras = {}
+
+for caractere in texto:
+    if(not(caractere == ',' or caractere == '.' or caractere == ' ')):
+        palavra_completa += caractere
+    
+    if(caractere == ' ' or final == final_texto):
+        palavras += [palavra_completa]
+        palavra_completa = ''
+
+    final += 1
+
+
+for palavra in palavras:
+    counter = 0
+    for i in range(len(palavras)):
+        if(palavra.lower() == palavras[i].lower()):
+            counter += 1
+
+    aparicoes_palavras[palavra.lower()] = counter
+
+print(aparicoes_palavras)

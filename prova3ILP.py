@@ -14,103 +14,103 @@ e) Crie uma lista contendo apenas os produtos que venderam 50 ou mais unidades e
 lista
 """
 
-quantidade_produtos = int(input('Informe a quantidade de itens no estoque: '))
+# quantidade_produtos = int(input('Informe a quantidade de itens no estoque: '))
 
-produtos = [input('Iforeme o produto: ') for i in range(quantidade_produtos)]
+# produtos = [input('Iforeme o produto: ') for i in range(quantidade_produtos)]
 
-print(produtos)
-
-
-itens_vendidos_mes = {}
-
-quantidade_total_itens_vendidos_mes = {}
-
-lista_quantidade_total_itens_vendidos_mes = []
-
-maior_valor_itens_vendidos_mes = 0
-
-quantidade_produtos_acima_50 = 0
-
-produtos_acima_50 = []
-
-quantidade_produtos_ao_longo_meses = {}
-
-item_mais_vendido_ao_longo_mes = ''
-
-quantidade_item_mais_vendido_ao_longo_mes = 0
+# print(produtos)
 
 
+# itens_vendidos_mes = {}
 
-for i in range(2):
-    mes = input('Informe o mês de vendas: ')
-    quantidade_itens_vendidos_mes = {}
-    quantidade_total = 0
-    for produto in produtos:
-        quantidade = int(input(f'Informe a quantidade de {produto} vendidos(a): '))
-        quantidade_itens_vendidos_mes[produto] = quantidade
-        quantidade_total += quantidade
-    itens_vendidos_mes[mes] = quantidade_itens_vendidos_mes
-    quantidade_total_itens_vendidos_mes[mes] = quantidade_total
-    lista_quantidade_total_itens_vendidos_mes += [quantidade_total]
+# quantidade_total_itens_vendidos_mes = {}
+
+# lista_quantidade_total_itens_vendidos_mes = []
+
+# maior_valor_itens_vendidos_mes = 0
+
+# quantidade_produtos_acima_50 = 0
+
+# produtos_acima_50 = []
+
+# quantidade_produtos_ao_longo_meses = {}
+
+# item_mais_vendido_ao_longo_mes = ''
+
+# quantidade_item_mais_vendido_ao_longo_mes = 0
+
+
+
+# for i in range(2):
+#     mes = input('Informe o mês de vendas: ')
+#     quantidade_itens_vendidos_mes = {}
+#     quantidade_total = 0
+#     for produto in produtos:
+#         quantidade = int(input(f'Informe a quantidade de {produto} vendidos(a): '))
+#         quantidade_itens_vendidos_mes[produto] = quantidade
+#         quantidade_total += quantidade
+#     itens_vendidos_mes[mes] = quantidade_itens_vendidos_mes
+#     quantidade_total_itens_vendidos_mes[mes] = quantidade_total
+#     lista_quantidade_total_itens_vendidos_mes += [quantidade_total]
 
     
 
 
-print(itens_vendidos_mes)
+# print(itens_vendidos_mes)
 
-print(quantidade_total_itens_vendidos_mes)
+# print(quantidade_total_itens_vendidos_mes)
 
-print(lista_quantidade_total_itens_vendidos_mes)
+# print(lista_quantidade_total_itens_vendidos_mes)
 
-for quantidade in lista_quantidade_total_itens_vendidos_mes:
-    if(maior_valor_itens_vendidos_mes < quantidade):
-        maior_valor_itens_vendidos_mes = quantidade
+# for quantidade in lista_quantidade_total_itens_vendidos_mes:
+#     if(maior_valor_itens_vendidos_mes < quantidade):
+#         maior_valor_itens_vendidos_mes = quantidade
 
-for chave,valor in quantidade_total_itens_vendidos_mes.items():
-    if(maior_valor_itens_vendidos_mes == valor):
-        print(chave)
+# for chave,valor in quantidade_total_itens_vendidos_mes.items():
+#     if(maior_valor_itens_vendidos_mes == valor):
+#         print(chave)
 
 
-for chave,valor in itens_vendidos_mes.items():
-    t = dict(itens_vendidos_mes[chave])
-    for c,v in t.items():
-        if((v >= 50) and (c not in produtos_acima_50)):
-            quantidade_produtos_acima_50 += 1
-            produtos_acima_50 += [c]
-            print(quantidade_produtos_acima_50)
-            print(produtos_acima_50)
+# for chave,valor in itens_vendidos_mes.items():
+#     t = dict(itens_vendidos_mes[chave])
+#     for c,v in t.items():
+#         if((v >= 50) and (c not in produtos_acima_50)):
+#             quantidade_produtos_acima_50 += 1
+#             produtos_acima_50 += [c]
+#             print(quantidade_produtos_acima_50)
+#             print(produtos_acima_50)
     
 
-for key,value in itens_vendidos_mes.items():
-    valores = dict(itens_vendidos_mes[key])
-    quantidade_produto_mais_vendido_mes = 0
-    for item,total in valores.items():
-        if(quantidade_produto_mais_vendido_mes < total):
-            quantidade_produto_mais_vendido_mes = total
-            produto_mais_vendido = item
-    print(f'{key}:{produto_mais_vendido}')
+# for key,value in itens_vendidos_mes.items():
+#     valores = dict(itens_vendidos_mes[key])
+#     quantidade_produto_mais_vendido_mes = 0
+#     for item,total in valores.items():
+#         if(quantidade_produto_mais_vendido_mes < total):
+#             quantidade_produto_mais_vendido_mes = total
+#             produto_mais_vendido = item
+#     print(f'{key}:{produto_mais_vendido}')
         
 
 
-for mes, itens_vendidos in itens_vendidos_mes.items():
-    vendas = dict(itens_vendidos_mes[mes])
-    for nome_produto, quantidade_vendida in vendas.items():
-        total_produto_especifico = 0
-        if(nome_produto in quantidade_produtos_ao_longo_meses):
-            total_produto_especifico += quantidade_vendida
-            quantidade_produtos_ao_longo_meses[nome_produto] += total_produto_especifico
-        else:
-            quantidade_produtos_ao_longo_meses[nome_produto] = quantidade_vendida
+# for mes, itens_vendidos in itens_vendidos_mes.items():
+#     vendas = dict(itens_vendidos_mes[mes])
+#     for nome_produto, quantidade_vendida in vendas.items():
+#         total_produto_especifico = 0
+#         if(nome_produto in quantidade_produtos_ao_longo_meses):
+#             total_produto_especifico += quantidade_vendida
+#             quantidade_produtos_ao_longo_meses[nome_produto] += total_produto_especifico
+#         else:
+#             quantidade_produtos_ao_longo_meses[nome_produto] = quantidade_vendida
 
 
-for produto, quantidade_ao_longo_mes in quantidade_produtos_ao_longo_meses.items():
-    if(quantidade_item_mais_vendido_ao_longo_mes < quantidade_ao_longo_mes):
-        quantidade_item_mais_vendido_ao_longo_mes = quantidade_ao_longo_mes
-        item_mais_vendido_ao_longo_mes = produto
+# for produto, quantidade_ao_longo_mes in quantidade_produtos_ao_longo_meses.items():
+#     if(quantidade_item_mais_vendido_ao_longo_mes < quantidade_ao_longo_mes):
+#         quantidade_item_mais_vendido_ao_longo_mes = quantidade_ao_longo_mes
+#         item_mais_vendido_ao_longo_mes = produto
 
 
-print(quantidade_produtos_ao_longo_meses)
-print(f'Item mais vendido ao longo do mês: {item_mais_vendido_ao_longo_mes}')
+# print(quantidade_produtos_ao_longo_meses)
+# print(f'Item mais vendido ao longo do mês: {item_mais_vendido_ao_longo_mes}')
 
 # ---------------------------------------------------------------------
 
