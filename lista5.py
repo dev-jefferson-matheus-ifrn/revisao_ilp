@@ -260,7 +260,7 @@ for loja, itens in lojas.items():
     while True:
         item = input(f"\nDigite o nome do item (produto) que deseja inserir na {loja}, ou 0 para parar: ")
         if item == '0': 
-            print('-' * 50)
+            print('-' * 50, '\n')
             break
         estoque = int(input(f"Digite a quantidade de intens do produto {item}: "))
         itens[item] = estoque
